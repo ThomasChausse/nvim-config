@@ -4,6 +4,7 @@ local keymap = vim.keymap
 
 -- Move selected lines down
 keymap.set("i", "jk", "<Esc>", { desc = "Exit insert mode with jk" })
+
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
 
@@ -24,10 +25,6 @@ keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move Line Up" }) -- Move the 
 keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move Line Down" }) -- Move the current line down
 keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move Lines Down" }) -- Move selected lines down
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Lines Up" }) -- Move selected lines up
--- Duplicate selected lines  : mode visual --> VyP
--- Create a line break  normal mode
-keymap.set("n", "<A-o>", "o", { desc = "Create Line Below" })
-keymap.set("n", "<A-O>", "O", { desc = "Create Line Above" })
 
 -- Normal mode: Duplicate the current line and move it down using Alt+Shift+Down
 keymap.set("n", "<A-S-j>", "yyP | :m .+1<CR>", { desc = "Duplicate and Move Line Down", silent = true })

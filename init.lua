@@ -1,26 +1,2 @@
 require("thomas.core")
 require("thomas.lazy")
---require("telescope").load_extension("noice")
---
---local cmp = require("cmp")
---
---cmp.setup.cmdline("/", {
---	mapping = cmp.mapping.preset.cmdline(),
---	sources = {
---		{ name = "buffer" },
---	},
---})
---
---cmp.setup.cmdline(":", {
---	mapping = cmp.mapping.preset.cmdline(),
---	sources = cmp.config.sources({
---		{ name = "path" },
---	}, {
---		{
---			name = "cmdline",
---			options = {
---				ignore_cmds = { "Man", "!" },
---			},
---		},
---	}),
---})

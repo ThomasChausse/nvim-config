@@ -4,7 +4,7 @@ return {
 	config = function()
 		local bg = "#011628"
 		local bg_dark = "#011423"
-		local bg_highlight = "#143652"
+		local bg_highlight = "#000000"
 		local bg_search = "#0a64ac"
 		local bg_visual = "#275378"
 		local fg = "#cbe0f0"
@@ -29,9 +29,9 @@ return {
 				colors.fg_dark = fg_dark
 				colors.fg_float = fg
 				colors.fg_gutter = fg_gutter
-				colors.fg_sidebar = fg_dark
+				colors.fg_sidebar = fg_dark -- Customizing Type and TypeDef
 			end,
 		})
-		vim.cmd("colorscheme tokyonight")
+		vim.cmd("colorscheme tokyonight") -- Apply custom highlight groups for types and parameters
 	end,
 }

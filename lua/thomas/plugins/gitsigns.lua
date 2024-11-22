@@ -46,19 +46,18 @@ return {
 		end,
 	},
 	signs = {
-		-- Add (thick line)
 		add = { hl = "GitGutterAdd", text = "┃", numhl = "GitGutterAdd" },
-
-		-- Change (thick line)
 		change = { hl = "GitGutterChange", text = "┃", numhl = "GitGutterChange" },
-
-		-- Delete (red arrow)
 		delete = { hl = "GitGutterDelete", text = "➤", numhl = "GitSignsDeleteLn" },
-
-		-- Topdelete (red arrow)
 		topdelete = { hl = "GitGutterDelete", text = "➤", numhl = "GitSignsDeleteLn" },
-
-		-- Changedelete (thick line + arrow)
 		changedelete = { hl = "GitGutterChangeDelete", text = "⎸➤", numhl = "GitSignsChangeLn" },
+	},
+	signs_staged = {
+		add = { text = "┃" },
+		change = { text = "┃" },
+		delete = { text = "_" },
+		topdelete = { text = "‾" },
+		changedelete = { text = "~" },
+		untracked = { text = "┆" },
 	},
 }
