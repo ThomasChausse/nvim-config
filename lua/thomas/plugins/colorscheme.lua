@@ -11,6 +11,7 @@ return {
 		local fg_dark = "#b4d0e9"
 		local fg_gutter = "#627e97"
 		local border = "#547998"
+
 		vim.api.nvim_create_autocmd("ColorScheme", {
 			pattern = "tokyonight",
 			callback = function()
@@ -20,9 +21,13 @@ return {
 				vim.api.nvim_set_hl(0, "@function", { fg = "#dbcc58" }) -- Tomato for typedefs
 				vim.api.nvim_set_hl(0, "@function.builtin", { fg = "#dbcc58" }) -- Tomato for typedefs
 				vim.api.nvim_set_hl(0, "@string", { fg = "#e35734" }) -- Tomato for typedefs
-				vim.api.nvim_set_hl(0, "Preproc", { fg = "#bb9af7" }) -- Tomato for typedefs
+				vim.api.nvim_set_hl(0, "PreProc", { fg = "#bb9af7" }) -- Tomato for typedefs
 				vim.api.nvim_set_hl(0, "@variable", { fg = "#7dcfff" }) -- Tomato for typedefs
 				vim.api.nvim_set_hl(0, "@keyword", { fg = "#bb9af7" }) -- Tomato for typedefs
+				vim.api.nvim_set_hl(0, "@operator", { fg = "#ffffff" }) -- Tomato for typedefs
+				vim.api.nvim_set_hl(0, "@punctuation.delimiter", { fg = "#ffffff" }) -- Tomato for typedefs
+				vim.api.nvim_set_hl(0, "@punctuation.bracket", { fg = "#ffffff" }) -- Tomato for typedefs vim.api.nvim_set_hl(0, "@punctuation.braces", { fg =  "#8725db" }) -- Tomato for typedefs
+				-- vim.api.nvim_set_hl(0, "@punctuation.braces", { fg = "#18f535" }) -- Tomato for typedefs vim.api.nvim_set_hl(0, "@punctuation.braces", { fg =  "#8725db" }) -- Tomato for typedefs
 			end,
 		})
 		require("tokyonight").setup({
