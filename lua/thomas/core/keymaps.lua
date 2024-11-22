@@ -43,10 +43,3 @@ vim.api.nvim_set_keymap("v", "<S-Tab>", "<gv", { noremap = true, silent = true }
 
 -- Dismiss Noice Messages
 keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dimiss Noice Message" })
---let g:VM_mouse_mappings             = 1
---let g:VM_theme                      = 'iceblue'
---let g:VM_highlight_matches          = 'underline'
-
---let g:VM_maps = {}
---let g:VM_maps["Undo"]      = 'u'
---let g:VM_maps["Redo"]      = '<C-r>'
