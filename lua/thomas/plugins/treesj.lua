@@ -1,5 +1,5 @@
 return {
-	"Wanser/treesj",
+	"Wansmer/treesj",
 	keys = {
 		{
 			"<leader>mt",
