@@ -22,7 +22,7 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 
 -- Normal mode: Move the current line up or down
 keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move Line Up" }) -- Move the current line upJK
-keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move Line Down" }) -- Move the current line down
+keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move Line Down" }) -- Move the current line down ]]
 keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move Lines Down" }) -- Move selected lines down
 keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Lines Up" }) -- Move selected lines up
 
