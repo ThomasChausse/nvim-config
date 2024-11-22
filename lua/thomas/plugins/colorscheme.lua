@@ -14,12 +14,15 @@ return {
 		vim.api.nvim_create_autocmd("ColorScheme", {
 			pattern = "tokyonight",
 			callback = function()
-				-- Customize Type and Typedef highlight groups
-				vim.api.nvim_set_hl(0, "@type", { fg = "#3691ff", bold = true }) -- Tomato for tfunctionypedefs
-				vim.api.nvim_set_hl(0, "@type.builtin", { fg = "#3691ff", bold = true }) -- Tomato for typedefs
-				vim.api.nvim_set_hl(0, "@function", { fg = "#3fc56b" }) -- Tomato for typedefs
-				vim.api.nvim_set_hl(0, "@function.builtin", { fg = "#3fc56b" }) -- Tomato for typedefs
-				vim.api.nvim_set_hl(0, "@string", { fg = "#f9c859" }) -- Tomato for typedefs
+				-- Customize Type and Typedef highlight grou  if ()
+				vim.api.nvim_set_hl(0, "@type", { fg = "#85de93" }) -- Tomato for tfunctionypedefs
+				vim.api.nvim_set_hl(0, "@type.builtin", { fg = "#3691ff" }) -- Tomato for typedefs
+				vim.api.nvim_set_hl(0, "@function", { fg = "#dbcc58" }) -- Tomato for typedefs
+				vim.api.nvim_set_hl(0, "@function.builtin", { fg = "#dbcc58" }) -- Tomato for typedefs
+				vim.api.nvim_set_hl(0, "@string", { fg = "#e35734" }) -- Tomato for typedefs
+				vim.api.nvim_set_hl(0, "Preproc", { fg = "#bb9af7" }) -- Tomato for typedefs
+				vim.api.nvim_set_hl(0, "@variable", { fg = "#7dcfff" }) -- Tomato for typedefs
+				vim.api.nvim_set_hl(0, "@keyword", { fg = "#bb9af7" }) -- Tomato for typedefs
 			end,
 		})
 		require("tokyonight").setup({
