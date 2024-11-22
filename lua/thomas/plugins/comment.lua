@@ -17,7 +17,6 @@ return {
 		})
 	end,
 }
-
 -- BASIC MAPPINGS
 -- `gc` - Toggles the region using linewise comment
 -- `gb` - Toggles the region using blockwise comment
