@@ -71,6 +71,7 @@ return {
         "eslint",
         "jsonls",
         "clangd",
+        "pyright",
         "cmake",
         "dockerls",
         "bashls",

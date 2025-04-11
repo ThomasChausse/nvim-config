@@ -14,8 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
   { { import = "thomas.plugins" }, { import = "thomas.plugins.lsp" }, { import = "thomas.plugins.compile" } }, {
-    "nvim-telescope/telescope.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
+    "nvim-telescope/telescope.nvim",
     cheker = {
       enabled = true,
       notify = false,
@@ -24,3 +24,19 @@ require("lazy").setup(
       notify = false,
     },
   })
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function(args)
+    vim.defer_fn(function()
+      require("thomas.themes").apply(args.match)
+    end, 100)
+  end,
+})
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = function()
+    local ft = vim.bo.filetype
+    vim.defer_fn(function()
+      require("thomas.themes").apply(ft)
+    end, 100)
+  end,
+})

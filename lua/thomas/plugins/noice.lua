@@ -14,7 +14,7 @@ return {
     -- Custom message settings
     messages = {
       enabled = true,
-      timeout = 1000,
+      timeout = 3000,
       view = "mini", -- Use nvim-notify for notifications
       view_error = "notify",
       view_warning = "mini",
