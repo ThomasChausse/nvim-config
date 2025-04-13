@@ -34,9 +34,13 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.api.nvim_create_autocmd("ColorScheme", {
   callback = function()
-    local ft = vim.bo.filetype
     vim.defer_fn(function()
-      require("thomas.themes").apply(ft)
+      for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+        if vim.api.nvim_buf_is_loaded(buf) then
+          local ft = vim.api.nvim_buf_get_option(buf, "filetype")
+          require("thomas.themes").apply(ft)
+        end
+      end
     end, 100)
   end,
 })

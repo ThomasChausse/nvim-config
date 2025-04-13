@@ -36,7 +36,7 @@ return {
         term_id_counter = term_id_counter + 1
         terminals[cmd] = Terminal:new({
           open_mapping = [[<leader>mt]],
-          dir = cwd,
+          dir = vim.fn.getcwd(),
           direction = direction,
           float_opts = {
             border = "curved",

@@ -28,7 +28,9 @@ return {
       },
     },
     vim.keymap.set("n", "<A-l>", "<cmd>BufferLineMoveNext<cr>", { desc = "Move buffer right" }),
-    vim.keymap.set("n", "<A-h>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move buffer left" })
+    vim.keymap.set("n", "<A-h>", "<cmd>BufferLineMovePrev<cr>", { desc = "Move buffer left" }),
+    vim.keymap.set("n", "<C-A-l>", "<cmd>BufferLineCycleNext<cr>", { desc = "Move buffer left" }),
+    vim.keymap.set("n", "<C-A-h>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Move buffer left" }),
   },
 
 }
