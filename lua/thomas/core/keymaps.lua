@@ -47,3 +47,16 @@ keymap.set("n", "<leader>nd", "<cmd>NoiceDismiss<CR>", { desc = "Dimiss Noice Me
 
 keymap.set("v", "<C-W-j>", "<  ", { desc = "Duplicate and Move Line Down", silent = true })
 keymap.set("v", "<C-W-k>", "  ", { desc = "Duplicate and Move Line Down", silent = true })
+
+
+vim.keymap.set("n", "<leader>mmc", function()
+  require("telescope.builtin").man_pages({
+    sections = { "2", "3" }
+  })
+end, { desc = "C/System Man Pages" })
+
+vim.keymap.set("n", "<leader>mmu", function()
+  require("telescope.builtin").man_pages({
+    sections = { "1", "8" }
+  })
+end, { desc = "Fuzzy-find man pages" })
